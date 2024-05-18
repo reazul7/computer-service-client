@@ -20,3 +20,4 @@ yarn format
 -   Awesome React Component (react-responsive-carousel)
 -   React Icon
 -   react-helmet-async
+-   react-parallax
