@@ -13,8 +13,9 @@ yarn format
 -   Tailwind CSS
 -   DaisyUI
 
-## Libraries
+## Libraries && Packages
 
 -   ESLint, Prettier
--   SwiperJS
--   Awesome React Component (eact-responsive-carousel, )
+-   SwiperJS (Responsive breakpoints, Navigation)
+-   Awesome React Component (react-responsive-carousel)
+-   React Icon
