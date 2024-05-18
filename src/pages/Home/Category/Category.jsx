@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -13,11 +13,26 @@ export default function Category() {
     return (
         <div className="my-16">
             <Swiper
-                slidesPerView={3}
-                spaceBetween={30}
-                freeMode={true}
-                pagination={{ clickable: true }}
-                modules={[FreeMode, Pagination]}
+                slidesPerView={1}
+                spaceBetween={10}
+                pagination={{
+                    clickable: true,
+                }}
+                breakpoints={{
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 50,
+                    },
+                }}
+                modules={[Pagination]}
                 className="mySwiper"
             >
                 <SwiperSlide>
