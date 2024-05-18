@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import { useState } from "react";
-import MenuItem from "../Home/Shared/MenuItem/MenuItem";
+import MenuItem from "../../Shared/MenuItem/MenuItem";
 
 export default function PopularMenu() {
     const [menu, setMenu] = useState([]);
@@ -20,6 +20,9 @@ export default function PopularMenu() {
                 {menu?.map(item => (
                     <MenuItem key={item?._id} item={item}></MenuItem>
                 ))}
+            </div>
+            <div className="text-center pt-2">
+                <button className="btn btn-outline border-0 border-b-4 mt-4">View Full Menu</button>
             </div>
         </section>
     );

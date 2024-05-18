@@ -19,3 +19,4 @@ yarn format
 -   SwiperJS (Responsive breakpoints, Navigation)
 -   Awesome React Component (react-responsive-carousel)
 -   React Icon
+-   react-helmet-async
