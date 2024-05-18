@@ -28,7 +28,7 @@ export default function NavBar() {
 
     return (
         <>
-            <div className="navbar bg-base-100">
+            <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-xl">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div
@@ -64,7 +64,7 @@ export default function NavBar() {
                     <ul className="menu menu-horizontal px-1">{navOptions}</ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <a className="btn">Get Started</a>
                 </div>
             </div>
         </>
