@@ -17,7 +17,7 @@ yarn format
 
 -   ESLint, Prettier
 -   SwiperJS (Responsive breakpoints, Navigation)
--   Awesome React Component (react-responsive-carousel)
+-   Awesome React Component (react-responsive-carousel, )
 -   React Icon
 -   react-helmet-async
 -   react-parallax

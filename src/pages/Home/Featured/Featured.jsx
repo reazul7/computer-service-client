@@ -12,7 +12,7 @@ export default function Featured() {
                 </div>
                 <div className="md:ml-10">
                     <p>Aug 20, 2029</p>
-                    <p className="uppercase">Where can i get some?</p>
+                    <p className="uppercase">How can I get Premium Service?</p>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aut temporibus deleniti iusto facilis deserunt
                         laudantium ea nobis assumenda vitae.

@@ -1,7 +1,7 @@
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import Featured from "../Featured/Featured";
-import PopularMenu from "../PopularMenu/PopularMenu";
+import PopularService from "../PopularService/PopularService";
 import Testimonials from "../Testimonials/Testimonials";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
         <div>
             <Banner />
             <Category />
-            <PopularMenu />
+            <PopularService />
             <Featured />
             <Testimonials />
         </div>
