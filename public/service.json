@@ -2,17 +2,17 @@
     {
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Haddock",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise software installations with French beans.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "salad",
+        "category": "software installations",
         "price": 14.7
     },
     {
         "_id": "642c155b2c4774f05c36eeb9",
         "name": "Haddock",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise software installations with French beans.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "drinks",
+        "category": "data recovery",
         "price": 14.7
     },
     {
@@ -28,7 +28,7 @@
         "name": "Escalope de Veau",
         "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "dessert",
+        "category": "virus removal",
         "price": 12.5
     },
     {
@@ -44,7 +44,7 @@
         "name": "Escalope de Veau",
         "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "dessert",
+        "category": "virus removal",
         "price": 12.5
     },
     {
@@ -52,7 +52,7 @@
         "name": "Escalope de Veau",
         "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "pizza",
+        "category": "computer service",
         "price": 12.5
     },
     {
@@ -60,15 +60,15 @@
         "name": "Breton Fish Stew",
         "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
-        "category": "pizza",
+        "category": "computer service",
         "price": 12.9
     },
     {
         "_id": "642c155b2c4774f05c36eea6",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut software installations",
         "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
-        "category": "salad",
+        "category": "software installations",
         "price": 13.5
     },
     {
@@ -76,15 +76,15 @@
         "name": "Escalope de Veau",
         "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "soup",
+        "category": "laptop service",
         "price": 12.5
     },
     {
         "_id": "642c155b2c4774f05c36ee89",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut software installations",
         "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
-        "category": "dessert",
+        "category": "virus removal",
         "price": 13.5
     },
     {
@@ -92,7 +92,7 @@
         "name": "Escalope de Veau",
         "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "dessert",
+        "category": "virus removal",
         "price": 12.5
     },
     {
@@ -100,13 +100,13 @@
         "name": "Fish Parmentier",
         "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
-        "category": "pizza",
+        "category": "computer service",
         "price": 9.5
     },
     {
         "_id": "642c155b2c4774f05c36ee81",
         "name": "Tuna Niçoise",
-        "description": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
+        "description": "Warm goats cheese and roasted vegetable software installations with black olive tapenade crostini",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
         "category": "offered",
         "price": 10.5
@@ -116,15 +116,15 @@
         "name": "Roast Duck Breast",
         "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-4-370x247.jpg",
-        "category": "dessert",
+        "category": "virus removal",
         "price": 14.5
     },
     {
         "_id": "642c155b2c4774f05c36eea4",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut software installations",
         "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
-        "category": "salad",
+        "category": "software installations",
         "price": 13.5
     },
     {
@@ -132,20 +132,20 @@
         "name": "Fish Parmentier",
         "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
-        "category": "salad",
+        "category": "software installations",
         "price": 9.5
     },
     {
         "_id": "642c155b2c4774f05c36ee87",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut software installations",
         "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
-        "category": "dessert",
+        "category": "virus removal",
         "price": 13.5
     },
     {
         "_id": "642c155b2c4774f05c36ee83",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut software installations",
         "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
         "category": "offered",
@@ -161,18 +161,18 @@
     },
     {
         "_id": "642c155b2c4774f05c36eea8",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut software installations",
         "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
-        "category": "salad",
+        "category": "software installations",
         "price": 13.5
     },
     {
         "_id": "642c155b2c4774f05c36eeba",
         "name": "Haddock",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise software installations with French beans.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "drinks",
+        "category": "data recovery",
         "price": 14.7
     },
     {
@@ -188,23 +188,23 @@
         "name": "Fish Parmentier",
         "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "dessert",
+        "category": "virus removal",
         "price": 9.5
     },
     {
         "_id": "642c155b2c4774f05c36eeb0",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut software installations",
         "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
-        "category": "soup",
+        "category": "laptop service",
         "price": 13.5
     },
     {
         "_id": "642c155b2c4774f05c36ee8d",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut software installations",
         "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
-        "category": "dessert",
+        "category": "virus removal",
         "price": 13.5
     },
     {
@@ -212,7 +212,7 @@
         "name": "Escalope de Veau",
         "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "dessert",
+        "category": "virus removal",
         "price": 12.5
     },
     {
@@ -220,15 +220,15 @@
         "name": "Fish Parmentier",
         "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
-        "category": "salad",
+        "category": "software installations",
         "price": 9.5
     },
     {
         "_id": "642c155b2c4774f05c36ee99",
-        "name": "Goats Cheese Pizza",
+        "name": "Goats Cheese computer service",
         "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2017/01/bbq-370x247.jpg",
-        "category": "pizza",
+        "category": "computer service",
         "price": 14.5
     },
     {
@@ -236,7 +236,7 @@
         "name": "Fish Parmentier",
         "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
-        "category": "soup",
+        "category": "laptop service",
         "price": 9.5
     },
     {
@@ -244,23 +244,23 @@
         "name": "Fish Parmentier",
         "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
-        "category": "soup",
+        "category": "laptop service",
         "price": 9.5
     },
     {
         "_id": "642c155b2c4774f05c36eeb6",
         "name": "Haddock",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise software installations with French beans.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "soup",
+        "category": "laptop service",
         "price": 14.7
     },
     {
         "_id": "642c155b2c4774f05c36eeb8",
         "name": "Haddock",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise software installations with French beans.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "soup",
+        "category": "laptop service",
         "price": 14.7
     },
     {
@@ -273,34 +273,34 @@
     },
     {
         "_id": "642c155b2c4774f05c36ee8b",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut software installations",
         "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
-        "category": "dessert",
+        "category": "virus removal",
         "price": 13.5
     },
     {
         "_id": "642c155b2c4774f05c36ee8f",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut software installations",
         "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
-        "category": "dessert",
+        "category": "virus removal",
         "price": 13.5
     },
     {
         "_id": "642c155b2c4774f05c36ee91",
         "name": "Haddock",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise software installations with French beans",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "dessert",
+        "category": "virus removal",
         "price": 14.7
     },
     {
         "_id": "642c155b2c4774f05c36ee97",
         "name": "Haddock",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise software installations with French beans.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "pizza",
+        "category": "computer service",
         "price": 14.7
     },
     {
@@ -308,7 +308,7 @@
         "name": "Roasted Pork Belly",
         "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "pizza",
+        "category": "computer service",
         "price": 14.5
     },
     {
@@ -316,39 +316,39 @@
         "name": "Fish Parmentier",
         "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
-        "category": "salad",
+        "category": "software installations",
         "price": 9.5
     },
     {
         "_id": "642c155b2c4774f05c36ee85",
         "name": "Tuna Niçoise",
-        "description": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
+        "description": "Warm goats cheese and roasted vegetable software installations with black olive tapenade crostini",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "dessert",
+        "category": "virus removal",
         "price": 10.5
     },
     {
         "_id": "642c155b2c4774f05c36ee93",
         "name": "Tuna Niçoise",
-        "description": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
+        "description": "Warm goats cheese and roasted vegetable software installations with black olive tapenade crostini",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "pizza",
+        "category": "computer service",
         "price": 10.5
     },
     {
         "_id": "642c155b2c4774f05c36ee95",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut software installations",
         "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
-        "category": "pizza",
+        "category": "computer service",
         "price": 13.5
     },
     {
         "_id": "642c155b2c4774f05c36ee9b",
-        "name": "Goats Cheese Pizza",
+        "name": "Goats Cheese computer service",
         "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2017/01/bbq-370x247.jpg",
-        "category": "pizza",
+        "category": "computer service",
         "price": 14.5
     },
     {
@@ -356,7 +356,7 @@
         "name": "Fish Parmentier",
         "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
-        "category": "soup",
+        "category": "laptop service",
         "price": 9.5
     },
     {
@@ -364,15 +364,15 @@
         "name": "Breton Fish Stew",
         "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
-        "category": "pizza",
+        "category": "computer service",
         "price": 12.9
     },
     {
         "_id": "642c155b2c4774f05c36ee9d",
-        "name": "Goats Cheese Pizza",
+        "name": "Goats Cheese computer service",
         "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2017/01/bbq-370x247.jpg",
-        "category": "pizza",
+        "category": "computer service",
         "price": 14.5
     },
     {
@@ -380,15 +380,15 @@
         "name": "Roasted Pork Belly",
         "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "salad",
+        "category": "software installations",
         "price": 14.5
     },
     {
         "_id": "642c155b2c4774f05c36eeb4",
         "name": "Haddock",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise software installations with French beans.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "soup",
+        "category": "laptop service",
         "price": 14.7
     },
     {
@@ -396,7 +396,7 @@
         "name": "Breton Fish Stew",
         "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
-        "category": "pizza",
+        "category": "computer service",
         "price": 12.9
     },
     {
@@ -412,7 +412,7 @@
         "name": "Escalope de Veau",
         "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "dessert",
+        "category": "virus removal",
         "price": 12.5
     },
     {
@@ -420,15 +420,15 @@
         "name": "Breton Fish Stew",
         "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
-        "category": "pizza",
+        "category": "computer service",
         "price": 12.9
     },
     {
         "_id": "642c155b2c4774f05c36eeab",
-        "name": "Goats Cheese Pizza",
+        "name": "Goats Cheese computer service",
         "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2017/01/bbq-370x247.jpg",
-        "category": "salad",
+        "category": "software installations",
         "price": 14.5
     },
     {
@@ -436,7 +436,7 @@
         "name": "Fish Parmentier",
         "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
-        "category": "soup",
+        "category": "laptop service",
         "price": 9.5
     },
     {
@@ -444,15 +444,15 @@
         "name": "Roast Duck Breast",
         "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-4-370x247.jpg",
-        "category": "soup",
+        "category": "laptop service",
         "price": 14.5
     },
     {
         "_id": "642c155b2c4774f05c36eeae",
         "name": "Tuna Niçoise",
-        "description": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
+        "description": "Warm goats cheese and roasted vegetable software installations with black olive tapenade crostini",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "soup",
+        "category": "laptop service",
         "price": 10.5
     }
 ]

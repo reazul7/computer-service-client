@@ -9,17 +9,17 @@ import { useParams } from "react-router-dom";
 import orderImage from "../../../assets/shop/banner2.jpg";
 
 export default function Order() {
-    const categories = ["salad", "pizza", "soup", "dessert", "drinks"];
+    const categories = ["computer-service", "laptop-service", "software-installations", "virus-removal", "data-recovery"];
     const { category } = useParams();
     const initialIndex = categories.indexOf(category);
     const [tabIndex, setTabIndex] = useState(initialIndex);
     const [menu] = useService();
 
-    const salad = menu?.filter(item => item?.category === "salad");
-    const dessert = menu?.filter(item => item?.category === "dessert");
-    const pizza = menu?.filter(item => item?.category === "pizza");
-    const soup = menu?.filter(item => item?.category === "soup");
-    const drinks = menu?.filter(item => item?.category === "drinks");
+    const computerService = menu?.filter(item => item?.category === "computer service");
+    const laptopService = menu?.filter(item => item?.category === "laptop service");
+    const softwareInstallations = menu?.filter(item => item?.category === "software installations");
+    const virusRemoval = menu?.filter(item => item?.category === "virus-removal");
+    const dataRecovery = menu?.filter(item => item?.category === "data recovery");
 
     return (
         <div>
@@ -29,26 +29,26 @@ export default function Order() {
             <Cover image={orderImage} title={"Order Food"} />
             <Tabs selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
                 <TabList>
-                    <Tab>Salad</Tab>
-                    <Tab>Pizza</Tab>
-                    <Tab>Soups</Tab>
-                    <Tab>Desert</Tab>
-                    <Tab>Drinks</Tab>
+                    <Tab>Computer Service</Tab>
+                    <Tab>Laptop Service</Tab>
+                    <Tab>Software Installations</Tab>
+                    <Tab>Virus Removal</Tab>
+                    <Tab>Data Recovery</Tab>
                 </TabList>
                 <TabPanel>
-                    <OrderTab items={salad} />
+                    <OrderTab items={computerService} />
                 </TabPanel>
                 <TabPanel>
-                    <OrderTab items={pizza} />
+                    <OrderTab items={laptopService} />
                 </TabPanel>
                 <TabPanel>
-                    <OrderTab items={soup} />
+                    <OrderTab items={softwareInstallations} />
                 </TabPanel>
                 <TabPanel>
-                    <OrderTab items={dessert} />
+                    <OrderTab items={virusRemoval} />
                 </TabPanel>
                 <TabPanel>
-                    <OrderTab items={drinks} />
+                    <OrderTab items={dataRecovery} />
                 </TabPanel>
             </Tabs>
         </div>

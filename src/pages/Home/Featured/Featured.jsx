@@ -14,8 +14,8 @@ export default function Featured() {
                     <p>Aug 20, 2029</p>
                     <p className="uppercase">How can I get Premium Service?</p>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aut temporibus deleniti iusto facilis deserunt
-                        laudantium ea nobis assumenda vitae.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aut temporibus deleniti iusto facilis deserunt laudantium ea nobis
+                        assumenda vitae.
                     </p>
                     <button className="btn btn-outline border-0 border-b-4 mt-4">Order Now</button>
                 </div>
