@@ -25,3 +25,4 @@ yarn format
 -   React Icon
 -   react-helmet-async
 -   react-parallax
+-   react-simple-captcha
