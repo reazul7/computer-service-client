@@ -12,6 +12,9 @@ export default function NavBar() {
             <li>
                 <Link to="/order/computer-service">Order</Link>
             </li>
+            <li>
+                <Link to="/login">Login</Link>
+            </li>
         </>
     );
 
