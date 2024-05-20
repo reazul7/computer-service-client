@@ -21,7 +21,7 @@ export default function Login() {
         console.log(email, password);
         signIn(email, password).then(result => {
             const user = result.user;
-            console.log(user, "user");
+            console.log("user", user);
         });
     };
 
@@ -35,7 +35,7 @@ export default function Login() {
         }
     };
     return (
-        <div>
+        <>
             <Helmet>
                 <title>Login | Computer Service</title>
             </Helmet>
@@ -95,6 +95,6 @@ export default function Login() {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }

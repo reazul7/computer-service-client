@@ -7,7 +7,7 @@ const auth = getAuth(app);
 
 export default function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
-    const [loading, , setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     const createUser = (email, password) => {
         setLoading(true);
@@ -16,7 +16,7 @@ export default function AuthProvider({ children }) {
 
     const signIn = (email, password) => {
         setLoading(true);
-        return signInWithEmailAndPassword(email, password);
+        return signInWithEmailAndPassword(auth, email, password);
     };
 
     const logOut = () => {
