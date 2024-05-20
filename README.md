@@ -16,6 +16,7 @@ yarn format
 -   React Router DOM
 -   Tailwind CSS
 -   DaisyUI
+-   Google Firebase
 
 ## Libraries && Packages
 
