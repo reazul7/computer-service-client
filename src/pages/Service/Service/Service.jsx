@@ -4,28 +4,28 @@ import useService from "../../../hooks/useService";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import ServiceCategory from "../ServiceCategory/ServiceCategory";
 
-import menuImg from "../../../assets/menu/banner3.jpg";
+import serviceImg from "../../../assets/menu/banner3.jpg";
 import softwareInstallationImg from "../../../assets/menu/salad-bg.jpg";
 import computerServiceImg from "../../../assets/menu/pizza-bg.jpg";
 import laptopServiceImg from "../../../assets/menu/soup-bg.jpg";
 import virusRemovalImg from "../../../assets/menu/dessert-bg.jpeg";
 
 export default function Menu() {
-    const [menu] = useService();
+    const [service] = useService();
 
-    const offered = menu?.filter(item => item?.category === "offered");
-    const computerService = menu?.filter(item => item?.category === "computer service");
-    const laptopService = menu?.filter(item => item?.category === "laptop service");
-    const softwareInstallations = menu?.filter(item => item?.category === "software installations");
-    const virusRemoval = menu?.filter(item => item?.category === "virus-removal");
-    const dataRecovery = menu?.filter(item => item?.category === "data recovery");
+    const offered = service?.filter(item => item?.category === "offered");
+    const computerService = service?.filter(item => item?.category === "computer service");
+    const laptopService = service?.filter(item => item?.category === "laptop service");
+    const softwareInstallations = service?.filter(item => item?.category === "software installations");
+    const virusRemoval = service?.filter(item => item?.category === "virus removal");
+    const dataRecovery = service?.filter(item => item?.category === "data recovery");
 
     return (
         <div>
             <Helmet>
                 <title>Menu | Computer Service</title>
             </Helmet>
-            <Cover image={menuImg} title={"Our Menu"} />
+            <Cover image={serviceImg} title={"Our Menu"} />
             {/* Main cover */}
             <SectionTitle subHeading={"Don't Miss"} heading={"Today's Offer"} />
 

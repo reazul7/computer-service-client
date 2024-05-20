@@ -1,10 +1,14 @@
 ## Project Run command
 
+```bash
 yarn run dev
+```
 
 ### Format using Prettier command
 
+```bash
 yarn format
+```
 
 ## Technologies
 

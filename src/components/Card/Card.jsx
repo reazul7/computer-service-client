@@ -10,8 +10,8 @@ export default function Card({ item }) {
                 <div className="card-body text-center">
                     <h2 className="card-title mx-auto">{name}</h2>
                     <p>{description}</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Add to Cart</button>
+                    <div className="card-actions justify-center">
+                        <button className="btn btn-outline bg-slate-100 border-0 border-b-4 border-orange-400 mt-4">Add to Cart</button>
                     </div>
                 </div>
             </div>

@@ -13,13 +13,13 @@ export default function Order() {
     const { category } = useParams();
     const initialIndex = categories.indexOf(category);
     const [tabIndex, setTabIndex] = useState(initialIndex);
-    const [menu] = useService();
+    const [service] = useService();
 
-    const computerService = menu?.filter(item => item?.category === "computer service");
-    const laptopService = menu?.filter(item => item?.category === "laptop service");
-    const softwareInstallations = menu?.filter(item => item?.category === "software installations");
-    const virusRemoval = menu?.filter(item => item?.category === "virus-removal");
-    const dataRecovery = menu?.filter(item => item?.category === "data recovery");
+    const computerService = service?.filter(item => item?.category === "computer service");
+    const laptopService = service?.filter(item => item?.category === "laptop service");
+    const softwareInstallations = service?.filter(item => item?.category === "software installations");
+    const virusRemoval = service?.filter(item => item?.category === "virus removal");
+    const dataRecovery = service?.filter(item => item?.category === "data recovery");
 
     return (
         <div>
