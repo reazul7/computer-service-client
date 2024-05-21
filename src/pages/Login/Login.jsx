@@ -1,14 +1,18 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from "react-simple-captcha";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
 export default function Login() {
-    const captchaRef = useRef(null);
     const [loginDisabled, setLoginDisabled] = useState(true);
-
     const { signIn } = useContext(AuthContext);
+    const [passwordShown, setPasswordShown] = useState(false);
+    const togglePasswordVisibility = () => {
+        setPasswordShown(passwordShown ? false : true);
+    };
 
     useEffect(() => {
         loadCaptchaEnginge(6);
@@ -22,16 +26,37 @@ export default function Login() {
         signIn(email, password).then(result => {
             const user = result.user;
             console.log("user", user);
+            Swal.fire({
+                title: "User Login Successfully",
+                showClass: {
+                    popup: `
+                    animate__animated
+                    animate__fadeInUp
+                    animate__faster
+                  `,
+                },
+                hideClass: {
+                    popup: `
+                    animate__animated
+                    animate__fadeOutDown
+                    animate__faster
+                  `,
+                },
+            });
         });
     };
 
-    const handleValidateCaptcha = () => {
-        const user_captcha_value = captchaRef.current.value;
+    const handleValidateCaptcha = event => {
+        const user_captcha_value = event.target.value;
         if (validateCaptcha(user_captcha_value) === true) {
             setLoginDisabled(false);
         } else {
             setLoginDisabled(true);
-            alert("Captcha Does Not Match");
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Captcha Does Not Match..!",
+            });
         }
     };
     return (
@@ -56,11 +81,23 @@ export default function Login() {
                                 </label>
                                 <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                             </div>
-                            <div className="form-control">
+                            <div className="form-control relative">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                                <div className="relative flex items-center">
+                                    <input
+                                        type={passwordShown ? "text" : "password"}
+                                        name="password"
+                                        placeholder="password"
+                                        className="input input-bordered w-full pr-10 flex-grow"
+                                        required
+                                    />
+                                    <i className="absolute right-4 hover:cursor-pointer hover:text-blue-500" onClick={togglePasswordVisibility}>
+                                        {passwordShown ? <FaRegEyeSlash /> : <FaRegEye />}
+                                    </i>
+                                </div>
+
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">
                                         Forgot password?
@@ -72,26 +109,26 @@ export default function Login() {
                                     <LoadCanvasTemplate />
                                 </label>
                                 <input
-                                    ref={captchaRef}
+                                    onBlur={handleValidateCaptcha}
                                     type="name"
                                     name="captcha"
                                     placeholder="Type the captcha above"
                                     className="input input-bordered"
                                     required
                                 />
-                                <button onClick={handleValidateCaptcha} className="btn btn-outline btn-xs mt-2">
-                                    Validate
-                                </button>
                             </div>
                             <div className="form-control mt-6">
                                 <input disabled={loginDisabled} className="btn btn-primary" type="submit" value="Login" />
                             </div>
+                            <p className="text-center">
+                                <small>
+                                    New Here?{" "}
+                                    <Link className="underline text-blue-600" to={"/signup"}>
+                                        Create an Account.
+                                    </Link>
+                                </small>
+                            </p>
                         </form>
-                        <p>
-                            <small>
-                                New Here? <Link to={"/signup"}>Create an Account?</Link>
-                            </small>
-                        </p>
                     </div>
                 </div>
             </div>

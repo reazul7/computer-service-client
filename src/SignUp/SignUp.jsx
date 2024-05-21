@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { AuthContext } from "../providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 export default function SignUp() {
     const [passwordShown, setPasswordShown] = useState(false);
@@ -90,8 +91,17 @@ export default function SignUp() {
 
                             <div className="form-control mt-6">
                                 <input className="btn btn-primary" type="submit" value="Sign Up" />
-                                <input type="button" onClick={() => reset()} value="Reset Field Values" className="btn btn-outline btn-xs mt-2 text-black" />
+                                <input type="button" onClick={() => reset()} value="Reset Field Values" className="btn btn-outline btn-xs mt-3 text-black" />
                             </div>
+
+                            <p className="text-center">
+                                <small>
+                                    Already have an account?{" "}
+                                    <Link className="underline text-blue-600" to={"/login"}>
+                                        Login.
+                                    </Link>
+                                </small>
+                            </p>
                         </form>
                     </div>
                 </div>
