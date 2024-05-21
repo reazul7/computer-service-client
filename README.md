@@ -17,6 +17,8 @@ yarn format
 -   Tailwind CSS
 -   DaisyUI
 -   Google Firebase
+-   Axios
+-   React Query (TanStack)
 
 ## Libraries && Packages
 

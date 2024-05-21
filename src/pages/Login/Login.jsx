@@ -33,21 +33,10 @@ export default function Login() {
             const user = result.user;
             console.log("user", user);
             Swal.fire({
+                icon: "success",
                 title: "User Login Successfully",
-                showClass: {
-                    popup: `
-                    animate__animated
-                    animate__fadeInUp
-                    animate__faster
-                  `,
-                },
-                hideClass: {
-                    popup: `
-                    animate__animated
-                    animate__fadeOutDown
-                    animate__faster
-                  `,
-                },
+                showConfirmButton: false,
+                timer: 1500,
             });
             navigate(from, { replace: true });
         });
