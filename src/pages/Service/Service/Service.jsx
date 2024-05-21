@@ -23,7 +23,7 @@ export default function Menu() {
     return (
         <div>
             <Helmet>
-                <title>Menu | Computer Service</title>
+                <title>Service | Computer Service</title>
             </Helmet>
             <Cover image={serviceImg} title={"Our Menu"} />
             {/* Main cover */}

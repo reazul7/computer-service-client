@@ -3,25 +3,43 @@ import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { AuthContext } from "../providers/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export default function SignUp() {
     const [passwordShown, setPasswordShown] = useState(false);
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
+    const navigate = useNavigate();
+
     const togglePasswordVisibility = () => {
         setPasswordShown(passwordShown ? false : true);
     };
+
     const {
         register,
         handleSubmit,
         formState: { errors },
         reset,
     } = useForm();
+
     const onSubmit = data => {
-        console.log(data, "data-Sign Up");
+        console.log("data-Sign Up", data);
         createUser(data.email, data.password).then(result => {
             const loggedUser = result.user;
-            console.log(loggedUser, "loggedUser");
+            console.log("loggedUser", loggedUser);
+            updateUserProfile(data.name, data.photoURL)
+                .then(() => {
+                    console.log("User Profile Updated Successfully");
+                    reset();
+                    Swal.fire({
+                        icon: "success",
+                        title: "User Profile Updated Successfully",
+                        showConfirmButton: false,
+                        timer: 1500,
+                    });
+                    navigate("/");
+                })
+                .catch(errors => console.log("update user profile error", errors));
         });
     };
 
@@ -48,8 +66,16 @@ export default function SignUp() {
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input type="text" {...register("name", { required: true })} name="name" placeholder="name" className="input input-bordered" />
+                                <input type="text" {...register("name", { required: true })} name="name" placeholder="Name" className="input input-bordered" />
                                 {errors.name && <span className="text-red-500">Name is required*</span>}
+                            </div>
+                            {/* Photo Area */}
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Photo URL</span>
+                                </label>
+                                <input type="text" {...register("photoURL", { required: true })} placeholder="Photo URL" className="input input-bordered" />
+                                {errors.name && <span className="text-red-500">Photo URL is required*</span>}
                             </div>
                             {/* Email Area */}
                             <div className="form-control">
@@ -60,7 +86,7 @@ export default function SignUp() {
                                     type="email"
                                     {...register("email", { required: true })}
                                     name="email"
-                                    placeholder="email"
+                                    placeholder="Email"
                                     className="input input-bordered"
                                 />
                                 {errors.email && <span className="text-red-500">Email is required*</span>}
@@ -76,10 +102,11 @@ export default function SignUp() {
                                         type={passwordShown ? "text" : "password"}
                                         {...register("password", {
                                             required: true,
+                                            minLength: 6,
                                             pattern: /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* )/,
                                         })}
                                         name="password"
-                                        placeholder="password"
+                                        placeholder="Password"
                                         className="input input-bordered w-full pr-10 flex-grow"
                                     />
                                     <i className="absolute right-4 hover:cursor-pointer hover:text-blue-500" onClick={togglePasswordVisibility}>
@@ -89,7 +116,8 @@ export default function SignUp() {
                                 {errors.password?.type === "required" && <span className="text-red-500">Password is required*</span>}
                                 {errors.password?.type === "pattern" && (
                                     <span className="text-red-500">
-                                        Password must have one number, one lowercase, one uppercase, one special character, no space*
+                                        Password must have one number, one lowercase, one uppercase, one special character, no space and minimum 6 digit
+                                        character.*
                                     </span>
                                 )}
                             </div>
