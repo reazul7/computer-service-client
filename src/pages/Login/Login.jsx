@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from "react-simple-captcha";
 import { AuthContext } from "../../providers/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
@@ -11,6 +11,11 @@ export default function Login() {
     const [captchaInput, setCaptchaInput] = useState("");
     const { signIn } = useContext(AuthContext);
     const [passwordShown, setPasswordShown] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/";
+
     const togglePasswordVisibility = () => {
         setPasswordShown(passwordShown ? false : true);
     };
@@ -44,6 +49,7 @@ export default function Login() {
                   `,
                 },
             });
+            navigate(from, { replace: true });
         });
     };
     const handleCaptchaInputChange = event => {

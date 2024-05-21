@@ -21,9 +21,12 @@ export default function NavBar() {
             <li>
                 <Link to="/order/computer-service">Order</Link>
             </li>
+            <li>
+                <Link to="/secret">Secret</Link>
+            </li>
             {user ? (
                 <>
-                    <button onClick={handleLogout} className="btn btn-ghost">
+                    <button onClick={handleLogout} className="px-3">
                         Log Out
                     </button>
                 </>
