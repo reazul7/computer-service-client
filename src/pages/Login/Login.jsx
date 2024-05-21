@@ -73,14 +73,19 @@ export default function Login() {
                             et a id nisi.
                         </p>
                     </div>
+
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                        {/* Login form */}
                         <form onSubmit={handleLogin} className="card-body">
+                            {/* Email area */}
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                             </div>
+
+                            {/* Password Area with showPassword */}
                             <div className="form-control relative">
                                 <label className="label">
                                     <span className="label-text">Password</span>
@@ -97,13 +102,15 @@ export default function Login() {
                                         {passwordShown ? <FaRegEyeSlash /> : <FaRegEye />}
                                     </i>
                                 </div>
-
+                                {/* Forgot Password */}
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">
                                         Forgot password?
                                     </a>
                                 </label>
                             </div>
+
+                            {/* Captcha Area */}
                             <div className="form-control">
                                 <label className="label">
                                     <LoadCanvasTemplate />
@@ -117,6 +124,8 @@ export default function Login() {
                                     required
                                 />
                             </div>
+
+                            {/* Submit Button Area */}
                             <div className="form-control mt-6">
                                 <input disabled={loginDisabled} className="btn btn-primary" type="submit" value="Login" />
                             </div>

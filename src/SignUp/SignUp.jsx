@@ -39,8 +39,11 @@ export default function SignUp() {
                             et a id nisi.
                         </p>
                     </div>
+
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                        {/* SignUp Form Area */}
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+                            {/* Name Area */}
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
@@ -48,6 +51,7 @@ export default function SignUp() {
                                 <input type="text" {...register("name", { required: true })} name="name" placeholder="name" className="input input-bordered" />
                                 {errors.name && <span className="text-red-500">Name is required*</span>}
                             </div>
+                            {/* Email Area */}
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -62,6 +66,7 @@ export default function SignUp() {
                                 {errors.email && <span className="text-red-500">Email is required*</span>}
                             </div>
 
+                            {/* Password with ShowPassword Area */}
                             <div className="form-control relative">
                                 <label className="label">
                                     <span className="label-text">Password</span>
@@ -89,6 +94,7 @@ export default function SignUp() {
                                 )}
                             </div>
 
+                            {/* Submit SignUp Button Area */}
                             <div className="form-control mt-6">
                                 <input className="btn btn-primary" type="submit" value="Sign Up" />
                                 <input type="button" onClick={() => reset()} value="Reset Field Values" className="btn btn-outline btn-xs mt-3 text-black" />
