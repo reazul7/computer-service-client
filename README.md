@@ -27,3 +27,4 @@ yarn format
 -   react-helmet-async
 -   react-parallax
 -   react-simple-captcha
+-   sweetalert2
