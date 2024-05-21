@@ -8,6 +8,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
 export default function Login() {
     const [loginDisabled, setLoginDisabled] = useState(true);
+    const [captchaInput, setCaptchaInput] = useState("");
     const { signIn } = useContext(AuthContext);
     const [passwordShown, setPasswordShown] = useState(false);
     const togglePasswordVisibility = () => {
@@ -45,10 +46,11 @@ export default function Login() {
             });
         });
     };
-
-    const handleValidateCaptcha = event => {
-        const user_captcha_value = event.target.value;
-        if (validateCaptcha(user_captcha_value) === true) {
+    const handleCaptchaInputChange = event => {
+        setCaptchaInput(event.target.value);
+    };
+    const handleValidateCaptcha = () => {
+        if (validateCaptcha(captchaInput) === true) {
             setLoginDisabled(false);
         } else {
             setLoginDisabled(true);
@@ -116,17 +118,20 @@ export default function Login() {
                                     <LoadCanvasTemplate />
                                 </label>
                                 <input
-                                    onBlur={handleValidateCaptcha}
-                                    type="name"
+                                    onChange={handleCaptchaInputChange}
+                                    type="text"
                                     name="captcha"
                                     placeholder="Type the captcha above"
                                     className="input input-bordered"
                                     required
                                 />
+                                <button type="button" onClick={handleValidateCaptcha} className="btn btn-outline btn-xs mt-3">
+                                    Verify Captcha
+                                </button>
                             </div>
 
                             {/* Submit Button Area */}
-                            <div className="form-control mt-6">
+                            <div className="form-control mt-2">
                                 <input disabled={loginDisabled} className="btn btn-primary" type="submit" value="Login" />
                             </div>
                             <p className="text-center">
