@@ -8,9 +8,18 @@ export default function useCart() {
     const { refetch, data: cart = [] } = useQuery({
         queryKey: ["cart", user?.email],
         queryFn: async () => {
-            const res = await axiosSecure.get(`/carts?email=${user?.email}`);
+            if (!user?.email) {
+                // If user is not logged in or email is undefined, return an empty array
+                return [];
+            }
+            const res = await axiosSecure.get(`/carts?email=${user.email}`);
             return res.data;
         },
+        enabled: !!user?.email,
+        // queryFn: async () => {
+        //     const res = await axiosSecure.get(`/carts?email=${user?.email}`);
+        //     return res.data;
+        // },
     });
     return [cart, refetch];
 }
