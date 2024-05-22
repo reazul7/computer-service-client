@@ -23,7 +23,7 @@ export default function NavBar() {
                 <Link to="/service">Our Service</Link>
             </li>
             <li>
-                <Link to="/order/computer-service">Order</Link>
+                <Link to="/order/computer-service">Order Service</Link>
             </li>
             <li>
                 <Link to="/secret">Secret</Link>
