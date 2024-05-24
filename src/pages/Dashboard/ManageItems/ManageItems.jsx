@@ -3,14 +3,12 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import useService from "../../../hooks/useService";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import { Link } from "react-router-dom";
 
 export default function ManageItems() {
     const [service, , refetch] = useService();
     const axiosSecure = useAxiosSecure();
 
-    const handleUpdateItem = item => {
-        console.log("Delete Item", item);
-    };
     const handleDeleteItem = item => {
         Swal.fire({
             title: "Are you sure?",
@@ -67,9 +65,11 @@ export default function ManageItems() {
                                 <td>{item?.name}</td>
                                 <td>{item?.price}</td>
                                 <td>
-                                    <button onClick={() => handleUpdateItem(item)} className="btn btn-ghost bg-orange-500 btn-md">
-                                        <FaEdit className="text-white text-2xl" />{" "}
-                                    </button>
+                                    <Link to={`/dashboard/update-items/${item?._id}`}>
+                                        <button className="btn btn-ghost bg-orange-500 btn-md">
+                                            <FaEdit className="text-white text-2xl" />{" "}
+                                        </button>
+                                    </Link>
                                 </td>
                                 <td>
                                     <button onClick={() => handleDeleteItem(item)} className="btn btn-ghost btn-md">
