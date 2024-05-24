@@ -67,7 +67,7 @@ export default function AuthProvider({ children }) {
         return () => {
             return unsubscribe();
         };
-    }, []);
+    }, [axiosPublic]);
 
     const authInfo = { user, loading, createUser, signIn, googleSignIn, logOut, updateUserProfile };
     return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;
