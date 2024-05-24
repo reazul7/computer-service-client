@@ -6,6 +6,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../hooks/useAxiosPublic";
+import SocialLogin from "../components/SocialLogin/SocialLogin";
 
 export default function SignUp() {
     const axiosPublic = useAxiosPublic();
@@ -140,6 +141,7 @@ export default function SignUp() {
                                 <input type="button" onClick={() => reset()} value="Reset Field Values" className="btn btn-outline btn-xs mt-3 text-black" />
                             </div>
 
+                            <SocialLogin />
                             <p className="text-center">
                                 <small>
                                     Already have an account?{" "}

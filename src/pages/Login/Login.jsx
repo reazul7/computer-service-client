@@ -5,6 +5,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 export default function Login() {
     const [loginDisabled, setLoginDisabled] = useState(true);
@@ -129,7 +130,8 @@ export default function Login() {
                             <div className="form-control mt-2">
                                 <input disabled={loginDisabled} className="btn btn-primary" type="submit" value="Login" />
                             </div>
-                            <p className="text-center">
+                            <SocialLogin />
+                            <p className="text-center pt-1">
                                 <small>
                                     New Here?{" "}
                                     <Link className="underline text-blue-600" to={"/signup"}>
