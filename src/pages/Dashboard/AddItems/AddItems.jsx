@@ -30,12 +30,13 @@ export default function AddItems() {
             const serviceItem = {
                 name: data?.name,
                 category: data?.category,
-                price: data?.price,
+                price: parseFloat(data?.price),
                 description: data?.description,
                 image: res.data?.data?.display_url,
             };
             const serviceResponse = await axiosSecure.post("/service", serviceItem);
             if (serviceResponse.data.insertedId) {
+                console.log(data, 'boddda')
                 reset();
                 Swal.fire({
                     icon: "success",
@@ -74,22 +75,13 @@ export default function AddItems() {
                             <label className="label">
                                 <span className="label-text font-semibold text-lg">Service Category</span>
                             </label>
-                            {/* <select className="select select-bordered w-full" {...register("category", { required: true })}>
-                                <option disabled selected>Select a Category</option>
-                                <option value="computer-service">Computer Service</option>
-                                <option value="laptop-service">Laptop Service</option>
-                                <option value="software-installations">Software Installations</option>
-                                <option value="virus-removal">Virus Removal</option>
-                                <option value="data-recovery">Data Recovery</option>
-                            </select> */}
-
                             <select className="select select-bordered w-full" {...register("category", { required: "Category is required" })}>
-                                <option value="">Select a Category</option> {/* Ensuring default empty value */}
-                                <option value="computer-service">Computer Service</option>
-                                <option value="laptop-service">Laptop Service</option>
-                                <option value="software-installations">Software Installations</option>
-                                <option value="virus-removal">Virus Removal</option>
-                                <option value="data-recovery">Data Recovery</option>
+                                <option value="">Select a Category</option>
+                                <option value="computer service">Computer Service</option>
+                                <option value="laptop service">Laptop Service</option>
+                                <option value="software installations">Software Installations</option>
+                                <option value="virus removal">Virus Removal</option>
+                                <option value="data recovery">Data Recovery</option>
                             </select>
                             {errors.category && <span className="text-red-500">Category is required*</span>}
                         </div>
@@ -101,7 +93,12 @@ export default function AddItems() {
                             </label>
                             <input
                                 type="number"
-                                {...register("price", { required: true })}
+                                step="0.01"
+                                {...register("price", {
+                                    required: "Service Price is required",
+                                    valueAsNumber: true,
+                                    validate: value => !isNaN(value) || "Price must be a valid number",
+                                })}
                                 name="price"
                                 placeholder="Service Price"
                                 className="input input-bordered"
