@@ -5,8 +5,10 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { AuthContext } from "../providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 export default function SignUp() {
+    const axiosPublic = useAxiosPublic();
     const [passwordShown, setPasswordShown] = useState(false);
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -29,15 +31,25 @@ export default function SignUp() {
             console.log("loggedUser", loggedUser);
             updateUserProfile(data.name, data.photoURL)
                 .then(() => {
-                    console.log("User Profile Updated Successfully");
-                    reset();
-                    Swal.fire({
-                        icon: "success",
-                        title: "User Profile Updated Successfully",
-                        showConfirmButton: false,
-                        timer: 1500,
+                    // create user entry in the database
+                    const userInfo = {
+                        name: data.name,
+                        email: data.email,
+                        photoURL: data.photoURL,
+                    };
+                    axiosPublic.post("/users", userInfo).then(res => {
+                        if (res.data.insertedId) {
+                            console.log("User Profile Added to database Successfully");
+                            reset();
+                            Swal.fire({
+                                icon: "success",
+                                title: "User Profile Added Successfully",
+                                showConfirmButton: false,
+                                timer: 1500,
+                            });
+                            navigate("/");
+                        }
                     });
-                    navigate("/");
                 })
                 .catch(errors => console.log("update user profile error", errors));
         });
