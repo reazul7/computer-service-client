@@ -90,7 +90,7 @@ export default function Dashboard() {
                 </ul>
             </div>
             {/* Dashboard content */}
-            <div className="flex-1">
+            <div className="flex-1 p-5">
                 <Outlet></Outlet>
             </div>
         </div>
