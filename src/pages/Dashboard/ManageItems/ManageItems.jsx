@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 export default function ManageItems() {
-    const [service] = useService();
+    const [service, , refetch] = useService();
     const axiosSecure = useAxiosSecure();
 
     const handleUpdateItem = item => {
@@ -24,6 +24,7 @@ export default function ManageItems() {
             if (result.isConfirmed) {
                 axiosSecure.delete(`/service/${item?._id}`).then(res => {
                     if (res.data.deletedCount > 0) {
+                        refetch();
                         Swal.fire({
                             icon: "success",
                             title: `${item?.name} has been deleted`,
