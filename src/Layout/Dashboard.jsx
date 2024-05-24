@@ -4,10 +4,11 @@ import { MdPermContactCalendar, MdManageAccounts } from "react-icons/md";
 import { PiListPlusBold } from "react-icons/pi";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../hooks/useCart";
+import useAdmin from "../hooks/useAdmin";
 
 export default function Dashboard() {
     const [cart] = useCart();
-    const isAdmin = true;
+    const [isAdmin] = useAdmin();
     return (
         <div className="flex">
             {/* Dashboard Sidebar */}

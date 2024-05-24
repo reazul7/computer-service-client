@@ -13,7 +13,7 @@ export default function useAxiosSecure() {
     axiosSecure.interceptors.request.use(
         function (config) {
             const token = localStorage.getItem("access-token");
-            console.log("request stopped by interceptor", token);
+            // console.log("request stopped by interceptor", token);
             config.headers.authorization = `Bearer ${token}`;
             return config;
         },
@@ -29,7 +29,7 @@ export default function useAxiosSecure() {
         },
         async error => {
             const status = error.response.status;
-            console.log("status error in the interceptor", status);
+            // console.log("status error in the interceptor", status);
             // for 401 and 403 logout the user and move the user to the login page
             if (status === 401 || status === 403) {
                 await logOut();
