@@ -36,7 +36,7 @@ export default function AddItems() {
             };
             const serviceResponse = await axiosSecure.post("/service", serviceItem);
             if (serviceResponse.data.insertedId) {
-                console.log(data, 'boddda')
+                console.log(data, "boddda");
                 reset();
                 Swal.fire({
                     icon: "success",
