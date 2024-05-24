@@ -53,7 +53,6 @@ export default function Cart() {
                             <th>Name</th>
                             <th>Price</th>
                             <th>Action</th>
-                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
