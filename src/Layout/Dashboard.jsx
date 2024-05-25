@@ -69,6 +69,11 @@ export default function Dashboard() {
                                     <FaShoppingCart /> My Service Booking
                                 </NavLink>
                             </li>
+                            <li>
+                                <NavLink to={"/dashboard/payment-history"}>
+                                    <FaCalendar /> Payment History
+                                </NavLink>
+                            </li>
                         </>
                     )}
                     <div className="divider"></div>
