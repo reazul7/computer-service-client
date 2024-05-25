@@ -19,6 +19,7 @@ yarn format
 -   Google Firebase
 -   Axios
 -   React Query (TanStack)
+-   Stripe
 
 ## Libraries && Packages
 
