@@ -6,7 +6,6 @@ import Order from "../pages/Order/Order/Order";
 import Login from "../pages/Login/Login";
 import SignUp from "../SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
-import Secret from "../pages/Shared/Secret/Secret";
 import Dashboard from "../Layout/Dashboard";
 import Cart from "../pages/Dashboard/Cart/Cart";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
@@ -19,6 +18,7 @@ import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
 import NotFound from "../components/NotFound/NotFound";
+import UserProfile from "../pages/Dashboard/UserProfile/UserProfile";
 
 export const router = createBrowserRouter([
     {
@@ -46,10 +46,10 @@ export const router = createBrowserRouter([
                 element: <SignUp />,
             },
             {
-                path: "secret",
+                path: "user/profile",
                 element: (
                     <PrivateRoute>
-                        <Secret />
+                        <UserProfile />
                     </PrivateRoute>
                 ),
             },

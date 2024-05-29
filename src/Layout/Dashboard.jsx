@@ -1,14 +1,23 @@
 import { BsBagCheckFill } from "react-icons/bs";
 import { FaAd, FaCalendar, FaHome, FaShoppingCart, FaList, FaUsers } from "react-icons/fa";
-// import { MdPermContactCalendar, MdManageAccounts } from "react-icons/md";
 import { PiListPlusBold } from "react-icons/pi";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
+import { useContext } from "react";
+import { AuthContext } from "../providers/AuthProvider";
+import { IoLogOutSharp } from "react-icons/io5";
 
 export default function Dashboard() {
     const [cart] = useCart();
     const [isAdmin] = useAdmin();
+    const { logOut } = useContext(AuthContext);
+    const handleLogout = () => {
+        logOut()
+            .then(() => {})
+            .catch(error => console.log("error", error));
+    };
+
     return (
         <div className="flex">
             {/* Dashboard Sidebar */}
@@ -31,11 +40,6 @@ export default function Dashboard() {
                                     <FaList /> Manage Items
                                 </NavLink>
                             </li>
-                            {/* <li>
-                                <NavLink to={"/dashboard/manage-service-booking"}>
-                                    <MdManageAccounts /> Manage Service Booking
-                                </NavLink>
-                            </li> */}
                             <li>
                                 <NavLink to={"/dashboard/users"}>
                                     <FaUsers /> All Users
@@ -49,16 +53,6 @@ export default function Dashboard() {
                                     <FaHome /> User Home
                                 </NavLink>
                             </li>
-                            {/* <li>
-                                <NavLink to={"/dashboard/service-appointment"}>
-                                    <FaCalendar /> My Service Appointment
-                                </NavLink>
-                            </li> */}
-                            <li>
-                                <NavLink to={"/dashboard/cart"}>
-                                    <FaShoppingCart /> My Cart ({cart?.length})
-                                </NavLink>
-                            </li>
                             <li>
                                 <NavLink to={"/dashboard/review"}>
                                     <FaAd /> My Review
@@ -69,23 +63,33 @@ export default function Dashboard() {
                                     <FaShoppingCart /> My Service Booking
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink to={"/dashboard/payment-history"}>
-                                    <FaCalendar /> Payment History
-                                </NavLink>
-                            </li>
                         </>
                     )}
                     <div className="divider"></div>
                     <li>
-                        <NavLink to={"/"}>
-                            <FaHome /> Home
+                        <NavLink to={"/dashboard/cart"}>
+                            <FaShoppingCart /> My Cart ({cart?.length})
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={"/dashboard/payment-history"}>
+                            <FaCalendar /> My Payment History
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to={"/order/computer-service"}>
                             <BsBagCheckFill /> Order Service
                         </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={"/"}>
+                            <FaHome /> Home
+                        </NavLink>
+                    </li>
+                    <li className="pl-1">
+                        <button onClick={handleLogout} className="px-3">
+                            <IoLogOutSharp className="text-xl" /> Log Out
+                        </button>
                     </li>
                 </ul>
             </div>

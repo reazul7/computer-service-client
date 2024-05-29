@@ -10,7 +10,7 @@ import computerServiceImg from "../../../assets/menu/pizza-bg.jpg";
 import laptopServiceImg from "../../../assets/menu/soup-bg.jpg";
 import virusRemovalImg from "../../../assets/menu/dessert-bg.jpeg";
 
-export default function Menu() {
+export default function Service() {
     const [service] = useService();
 
     const offered = service?.filter(item => item?.category === "offered");
@@ -25,7 +25,7 @@ export default function Menu() {
             <Helmet>
                 <title>Service | Computer Service</title>
             </Helmet>
-            <Cover image={serviceImg} title={"Our Menu"} />
+            <Cover image={serviceImg} title={"Our Service"} />
             {/* Main cover */}
             <SectionTitle subHeading={"Don't Miss"} heading={"Today's Offer"} />
 
