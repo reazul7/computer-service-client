@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import useCart from "../../../hooks/useCart";
 import useAdmin from "../../../hooks/useAdmin";
+import logo from "../../../assets/logo-com-service.svg";
 
 export default function NavBar() {
     const { user, logOut } = useContext(AuthContext);
@@ -12,7 +13,7 @@ export default function NavBar() {
 
     const handleLogout = () => {
         logOut()
-            .then(() => {})
+            .then(() => { })
             .catch(error => console.log("error", error));
     };
     const navOptions = (
@@ -53,7 +54,9 @@ export default function NavBar() {
                             {navOptions}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Logo</a>
+                    <div className="px-4">
+                        <Link to={"/"} className="text-xl"><img src={logo} className="w-12" alt="" /></Link>
+                    </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">{navOptions}</ul>
