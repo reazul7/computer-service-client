@@ -31,3 +31,4 @@ yarn format
 -   react-parallax
 -   react-simple-captcha
 -   sweetalert2
+-   recharts
