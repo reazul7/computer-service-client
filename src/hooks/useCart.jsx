@@ -16,10 +16,6 @@ export default function useCart() {
             return res.data;
         },
         enabled: !!user?.email,
-        // queryFn: async () => {
-        //     const res = await axiosSecure.get(`/carts?email=${user?.email}`);
-        //     return res.data;
-        // },
     });
     return [cart, refetch];
 }

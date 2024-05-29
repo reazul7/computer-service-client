@@ -1,6 +1,6 @@
 import { BsBagCheckFill } from "react-icons/bs";
 import { FaAd, FaCalendar, FaHome, FaShoppingCart, FaList, FaUsers } from "react-icons/fa";
-import { MdPermContactCalendar, MdManageAccounts } from "react-icons/md";
+// import { MdPermContactCalendar, MdManageAccounts } from "react-icons/md";
 import { PiListPlusBold } from "react-icons/pi";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../hooks/useCart";
@@ -31,11 +31,11 @@ export default function Dashboard() {
                                     <FaList /> Manage Items
                                 </NavLink>
                             </li>
-                            <li>
+                            {/* <li>
                                 <NavLink to={"/dashboard/manage-service-booking"}>
                                     <MdManageAccounts /> Manage Service Booking
                                 </NavLink>
-                            </li>
+                            </li> */}
                             <li>
                                 <NavLink to={"/dashboard/users"}>
                                     <FaUsers /> All Users
@@ -49,11 +49,11 @@ export default function Dashboard() {
                                     <FaHome /> User Home
                                 </NavLink>
                             </li>
-                            <li>
+                            {/* <li>
                                 <NavLink to={"/dashboard/service-appointment"}>
                                     <FaCalendar /> My Service Appointment
                                 </NavLink>
-                            </li>
+                            </li> */}
                             <li>
                                 <NavLink to={"/dashboard/cart"}>
                                     <FaShoppingCart /> My Cart ({cart?.length})
@@ -85,11 +85,6 @@ export default function Dashboard() {
                     <li>
                         <NavLink to={"/order/computer-service"}>
                             <BsBagCheckFill /> Order Service
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={"/order/computer-service"}>
-                            <MdPermContactCalendar /> Contact
                         </NavLink>
                     </li>
                 </ul>
