@@ -13,7 +13,7 @@ export default function NavBar() {
 
     const handleLogout = () => {
         logOut()
-            .then(() => { })
+            .then(() => {})
             .catch(error => console.log("error", error));
     };
     const navOptions = (
@@ -86,9 +86,7 @@ export default function NavBar() {
                                 <span className="text-info">Subtotal: ${totalPrice}</span>
                                 <Link to="/dashboard/cart">
                                     <div className="card-actions">
-                                        <button className="btn btn-primary btn-block">
-                                            View cart
-                                        </button>
+                                        <button className="btn btn-primary btn-block">View cart</button>
                                     </div>
                                 </Link>
                             </div>
@@ -105,7 +103,7 @@ export default function NavBar() {
                             </div>
                             <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-content text-white rounded-box w-52">
                                 <li>
-                                    <Link to="/user/profile">Profile</Link>
+                                    <Link to="/dashboard/profile">Profile</Link>
                                 </li>
                                 <li>
                                     <button onClick={handleLogout} className="px-3">

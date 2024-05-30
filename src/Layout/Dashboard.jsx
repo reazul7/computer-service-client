@@ -45,6 +45,16 @@ export default function Dashboard() {
                                     <FaUsers /> All Users
                                 </NavLink>
                             </li>
+                            <li>
+                                <NavLink to={"/dashboard/cart"}>
+                                    <FaShoppingCart /> My Cart ({cart?.length})
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={"/dashboard/payment-history"}>
+                                    <FaCalendar /> My Payment History
+                                </NavLink>
+                            </li>
                         </>
                     ) : (
                         <>
@@ -54,8 +64,23 @@ export default function Dashboard() {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to={"/dashboard/review"}>
-                                    <FaAd /> My Review
+                                <NavLink to={"/dashboard/cart"}>
+                                    <FaShoppingCart /> My Cart ({cart?.length})
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={"/dashboard/payment-history"}>
+                                    <FaCalendar /> My Payment History
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={"/dashboard/add-review"}>
+                                    <FaAd /> Add Review
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={"/dashboard/reviews"}>
+                                    <FaAd /> My Reviews
                                 </NavLink>
                             </li>
                             <li>
@@ -66,16 +91,6 @@ export default function Dashboard() {
                         </>
                     )}
                     <div className="divider"></div>
-                    <li>
-                        <NavLink to={"/dashboard/cart"}>
-                            <FaShoppingCart /> My Cart ({cart?.length})
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={"/dashboard/payment-history"}>
-                            <FaCalendar /> My Payment History
-                        </NavLink>
-                    </li>
                     <li>
                         <NavLink to={"/order/computer-service"}>
                             <BsBagCheckFill /> Order Service

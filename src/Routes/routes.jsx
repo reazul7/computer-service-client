@@ -19,6 +19,8 @@ import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
 import NotFound from "../components/NotFound/NotFound";
 import UserProfile from "../pages/Dashboard/UserProfile/UserProfile";
+import AddReview from "../pages/Dashboard/Reviews/AddReview/AddReview";
+import ShowReviews from "../pages/Dashboard/Reviews/AddReview/ShowReviews";
 
 export const router = createBrowserRouter([
     {
@@ -44,14 +46,6 @@ export const router = createBrowserRouter([
             {
                 path: "signup",
                 element: <SignUp />,
-            },
-            {
-                path: "user/profile",
-                element: (
-                    <PrivateRoute>
-                        <UserProfile />
-                    </PrivateRoute>
-                ),
             },
         ],
     },
@@ -79,6 +73,18 @@ export const router = createBrowserRouter([
             {
                 path: "user-home",
                 element: <UserHome />,
+            },
+            {
+                path: "add-review",
+                element: <AddReview />,
+            },
+            {
+                path: "reviews",
+                element: <ShowReviews />,
+            },
+            {
+                path: "profile",
+                element: <UserProfile />,
             },
             // admin routes
             {

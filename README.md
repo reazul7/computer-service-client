@@ -10,7 +10,7 @@ yarn run dev
 yarn format
 ```
 
-## Technologies
+## Technologies && Service Providers
 
 -   React
 -   React Router DOM
@@ -20,6 +20,7 @@ yarn format
 -   Axios
 -   React Query (TanStack)
 -   Stripe
+-   ImgBB
 
 ## Libraries && Packages
 
