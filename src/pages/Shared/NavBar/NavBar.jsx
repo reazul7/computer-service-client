@@ -13,7 +13,7 @@ export default function NavBar() {
 
     const handleLogout = () => {
         logOut()
-            .then(() => {})
+            .then(() => { })
             .catch(error => console.log("error", error));
     };
     const navOptions = (
@@ -84,11 +84,13 @@ export default function NavBar() {
                             <div className="card-body">
                                 <span className="font-bold text-lg">{cart?.length} Items</span>
                                 <span className="text-info">Subtotal: ${totalPrice}</span>
-                                <div className="card-actions">
-                                    <button className="btn btn-primary btn-block">
-                                        <Link to="/dashboard/cart">View cart</Link>
-                                    </button>
-                                </div>
+                                <Link to="/dashboard/cart">
+                                    <div className="card-actions">
+                                        <button className="btn btn-primary btn-block">
+                                            View cart
+                                        </button>
+                                    </div>
+                                </Link>
                             </div>
                         </div>
                     </div>
