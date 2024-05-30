@@ -13,7 +13,7 @@ export default function NavBar() {
 
     const handleLogout = () => {
         logOut()
-            .then(() => { })
+            .then(() => {})
             .catch(error => console.log("error", error));
     };
     const navOptions = (
@@ -55,7 +55,9 @@ export default function NavBar() {
                         </ul>
                     </div>
                     <div className="px-4">
-                        <Link to={"/"} className="text-xl"><img src={logo} className="w-12" alt="" /></Link>
+                        <Link to={"/"} className="text-xl">
+                            <img src={logo} className="w-12" alt="" />
+                        </Link>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
