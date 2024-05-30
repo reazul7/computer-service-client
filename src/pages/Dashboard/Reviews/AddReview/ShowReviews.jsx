@@ -1,4 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
 import SectionTitle from "../../../../components/SectionTitle/SectionTitle";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import useAuth from "../../../../hooks/useAuth";
@@ -14,42 +16,18 @@ export default function ShowReviews() {
             return res.data;
         },
     });
-    console.log("reviews", reviews);
     const totalRating = reviews.reduce((total, item) => total + item?.rating, 0);
-    console.log("totalRating", totalRating);
+    console.log("first review", reviews);
     return (
         <div>
             <SectionTitle heading={"My Reviews"} subHeading={"Your Previous Opinion"} />
             <div className="flex justify-evenly bg-base-300 py-4">
-                <h2 className="text-xl text-center">My Total Reviews: {reviews?.length}</h2>
-                <h2 className="text-xl text-center">My Avg. Rating: {totalRating / reviews?.length}</h2>
+                <h2 className="text-xl text-center border flex items-center">My Total Reviews: {reviews?.length}</h2>
+                <h2 className="text-xl text-center flex items-center border">
+                    <span className="px-2">My Avg. Rating:</span>
+                    <Rating style={{ maxWidth: 150 }} value={totalRating / reviews?.length} readOnly />
+                </h2>
             </div>
-
-            {/* <div className="overflow-x-auto py-2">
-                <table className="table table-zebra">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Total Price</th>
-                            <th>Transaction ID</th>
-                            <th>Payment Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {reviews?.map((payment, index) => (
-                            <tr key={payment?._id}>
-                                <td>{index + 1}</td>
-                                <td>{payment?.name}</td>
-                                <td>{payment?.email}</td>
-                                <td>{payment?.price}</td>
-                                <td>{payment?.transactionId}</td>
-                                <td>{payment?.date}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div> */}
 
             <div className="bg-base-200 p-4">
                 {reviews?.map((review, index) => (
@@ -58,7 +36,7 @@ export default function ShowReviews() {
                             <div className="card-body">
                                 <h2 className="card-title">{review?.name}</h2>
                                 <div className="card-actions justify-start items-center">
-                                    Rating: <button className="btn btn-success btn-sm text-xl">{review?.rating}</button>
+                                    <span className="font-bold">Rating:</span> <Rating style={{ maxWidth: 150 }} value={reviews?.rating} readOnly />
                                 </div>
                                 <p>{review?.review}</p>
                             </div>
