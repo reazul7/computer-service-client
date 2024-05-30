@@ -21,7 +21,6 @@ export default function PaymentCheckoutForm() {
     useEffect(() => {
         if (totalPrice > 0) {
             axiosSecure.post("/create-payment-intent", { price: totalPrice }).then(res => {
-                console.log("payment", res.data.clientSecret);
                 setClientSecret(res.data.clientSecret);
             });
         }

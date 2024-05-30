@@ -26,7 +26,6 @@ export default function SignUp() {
     } = useForm();
 
     const onSubmit = data => {
-        console.log("data-Sign Up", data);
         createUser(data.email, data.password).then(result => {
             const loggedUser = result.user;
             console.log("loggedUser", loggedUser);
@@ -40,7 +39,6 @@ export default function SignUp() {
                     };
                     axiosPublic.post("/users", userInfo).then(res => {
                         if (res.data.insertedId) {
-                            console.log("User Profile Added to database Successfully");
                             reset();
                             Swal.fire({
                                 icon: "success",

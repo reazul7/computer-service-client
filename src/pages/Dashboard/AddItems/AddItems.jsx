@@ -10,7 +10,6 @@ const imageHostingApi = `https://api.imgbb.com/1/upload?key=${imageHostingKey}`;
 export default function AddItems() {
     const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
-    console.log(imageHostingKey);
 
     const {
         register,
@@ -36,7 +35,6 @@ export default function AddItems() {
             };
             const serviceResponse = await axiosSecure.post("/service", serviceItem);
             if (serviceResponse.data.insertedId) {
-                console.log(data, "boddda");
                 reset();
                 Swal.fire({
                     icon: "success",
