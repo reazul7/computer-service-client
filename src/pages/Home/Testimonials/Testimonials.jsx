@@ -8,17 +8,15 @@ import "./Testimonials.css";
 import { Navigation } from "swiper/modules";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
-import useAuth from "../../../hooks/useAuth";
-import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 export default function Testimonials() {
-    const { user } = useAuth();
-    const axiosSecure = useAxiosSecure();
+    const axiosSecure = useAxiosPublic();
 
     const { data: reviews = [] } = useQuery({
-        queryKey: ["payments", user?.email],
+        queryKey: ["reviews"],
         queryFn: async () => {
-            const res = await axiosSecure.get(`/reviews/${user?.email}`);
+            const res = await axiosSecure.get(`/reviews/`);
             return res.data;
         },
     });

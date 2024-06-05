@@ -17,7 +17,6 @@ export default function ShowReviews() {
         },
     });
     const totalRating = reviews.reduce((total, item) => total + item?.rating, 0);
-    console.log("first review", reviews);
     return (
         <div>
             <SectionTitle heading={"My Reviews"} subHeading={"Your Previous Opinion"} />
@@ -25,18 +24,23 @@ export default function ShowReviews() {
                 <h2 className="text-xl text-center border flex items-center">My Total Reviews: {reviews?.length}</h2>
                 <h2 className="text-xl text-center flex items-center border">
                     <span className="px-2">My Avg. Rating:</span>
-                    <Rating style={{ maxWidth: 150 }} value={totalRating / reviews?.length} readOnly />
+                    {reviews?.length > 0 ? (
+                        <Rating style={{ maxWidth: 150 }} value={totalRating / reviews?.length} readOnly />
+                    ) : (
+                        <Rating style={{ maxWidth: 150 }} value={0} readOnly />
+                    )}
                 </h2>
             </div>
 
             <div className="bg-base-200 p-4">
                 {reviews?.map((review, index) => (
                     <div className="py-2" key={index}>
+                        {console.log(review,'review')}
                         <div className="card lg:card-side bg-base-100 shadow-xl ">
                             <div className="card-body">
                                 <h2 className="card-title">{review?.name}</h2>
                                 <div className="card-actions justify-start items-center">
-                                    <span className="font-bold">Rating:</span> <Rating style={{ maxWidth: 150 }} value={reviews?.rating} readOnly />
+                                    <span className="font-bold">Rating:</span> <Rating style={{ maxWidth: 150 }} value={review?.rating} readOnly />
                                 </div>
                                 <p>{review?.review}</p>
                             </div>
