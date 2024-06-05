@@ -35,7 +35,7 @@ export default function ShowReviews() {
             <div className="bg-base-200 p-4">
                 {reviews?.map((review, index) => (
                     <div className="py-2" key={index}>
-                        {console.log(review,'review')}
+                        {console.log(review, "review")}
                         <div className="card lg:card-side bg-base-100 shadow-xl ">
                             <div className="card-body">
                                 <h2 className="card-title">{review?.name}</h2>

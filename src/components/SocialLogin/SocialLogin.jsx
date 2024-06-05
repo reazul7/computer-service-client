@@ -30,10 +30,10 @@ export default function SocialLogin() {
                     <FcGoogle className="text-xl" />
                     <span>Google</span>
                 </button>
-                <button className="btn btn-sm flex items-center space-x-1 w-1/2">
+                {/* <button className="btn btn-sm flex items-center space-x-1 w-1/2">
                     <FaFacebook className="text-xl" />
                     <span>Facebook</span>
-                </button>
+                </button> */}
             </div>
         </div>
     );

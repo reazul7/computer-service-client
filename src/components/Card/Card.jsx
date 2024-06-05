@@ -60,7 +60,7 @@ export default function Card({ item }) {
                     <p className="text-gray-700">{description}</p>
                 </div>
                 <div className="flex justify-center items-center p-4">
-                    <p className="text-lg font-bold text-blue-500 pt-5 px-5">${price}</p>
+                    <p className="pt-5 px-5">BDT: <span className="text-lg font-bold text-blue-700">{price}</span></p>
                     <button onClick={handleAddToCard} className="flex btn btn-outline bg-slate-100 border-0 border-b-4 border-orange-400 mt-4">
                         <GrCart /> Add to Cart
                     </button>

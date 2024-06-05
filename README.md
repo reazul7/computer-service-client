@@ -8,8 +8,6 @@
 
 <h4 align="center">A web app built by <a href="https://react.dev/" target="_blank">React</a>.</h4>
 
-
-
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
@@ -23,31 +21,35 @@
 
 ## Key Features
 
-* Google Auth
-  - For Login use Google Authentication Service
-* JWT Token
-  - JSON Web Tokens
-* Payment Gateway
-  - Use International Payment Gateway Service
-* User Registration
-  - Custom registration service
+-   Google Auth
+    -   For Login use Google Authentication Service
+-   JWT Token
+    -   JSON Web Tokens
+-   Payment Gateway
+    -   Use International Payment Gateway Service
+-   User Registration
+    -   Custom registration service
 
 ## How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 #### 1. Clone this repository
+
 ```bash
 git clone https://github.com/reazul7/computer-service-client.git
 ```
 
 #### 2. Go into the repository
+
 ```bash
 cd computer-service-client
 ```
+
 #### 3. Create a file named .env and copy all from .env.example. Make sure all values are given properly.
 
 #### 4. Install dependencies
+
 ```bash
 #for npm package
 npm install
@@ -56,11 +58,13 @@ yarn add
 ```
 
 #### 5. Run the app
+
 ```bash
 yarn run dev
 ```
 
 #### Format using Prettier command
+
 ```bash
 yarn format
 ```
@@ -69,12 +73,13 @@ yarn format
 
 This software uses the following open source packages:
 
-- [Node.js](https://nodejs.org/en)
-- [Express.js](https://expressjs.com/)
-
+-   [Node.js](https://nodejs.org/en)
+-   [Express.js](https://expressjs.com/)
 
 ## Technologies && Service Providers
+
 This software uses the following technologies and providers:
+
 -   React
 -   React Router DOM
 -   Tailwind CSS
@@ -85,9 +90,10 @@ This software uses the following technologies and providers:
 -   Stripe
 -   ImgBB
 
-
 ## Libraries && Packages
+
 This software uses the following libraries and packages:
+
 -   ESLint, Prettier
 -   SwiperJS (Responsive breakpoints, Navigation)
 -   Awesome React Component (react-responsive-carousel )
@@ -98,7 +104,6 @@ This software uses the following libraries and packages:
 -   sweetalert2
 -   recharts
 
-
 ## License
 
 MIT
@@ -108,4 +113,3 @@ MIT
 > [Portfolio](https://portfolio-8a25a.web.app/) &nbsp;&middot;&nbsp;
 > GitHub [reazul7](https://github.com/reazul7) &nbsp;&middot;&nbsp;
 > LinkedIn [Reazul Islam Bhuiyan](https://www.linkedin.com/in/reazul7/)
-

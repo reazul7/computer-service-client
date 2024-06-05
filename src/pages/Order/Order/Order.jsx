@@ -26,7 +26,7 @@ export default function Order() {
             <Helmet>
                 <title>Order | Computer Service</title>
             </Helmet>
-            <Cover image={orderImage} title={"Order Food"} />
+            <Cover image={orderImage} title={"Order Service"} />
             <Tabs selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
                 <TabList>
                     <Tab>Computer Service</Tab>
