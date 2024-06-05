@@ -110,7 +110,7 @@ export const router = createBrowserRouter([
                         <UpdateItem />
                     </AdminRoute>
                 ),
-                loader: ({ params }) => fetch(`http://localhost:5080/service/${params.id}`),
+                loader: ({ params }) => fetch(`https://computer-service-server.vercel.app/service/${params.id}`),
             },
             {
                 path: "manage-items",
