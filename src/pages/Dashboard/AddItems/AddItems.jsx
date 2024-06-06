@@ -132,7 +132,7 @@ export default function AddItems() {
 
                     {/* Submit SignUp Button Area */}
                     <div className="form-control mt-6">
-                        <input className="btn btn-primary" type="submit" value="Add Item" />
+                        <input className="btn bg-blue-400 text-black" type="submit" value="Add Item" />
                         <input type="button" onClick={() => reset()} value="Reset Field Values" className="btn btn-outline btn-xs mt-3 text-black" />
                     </div>
                 </form>

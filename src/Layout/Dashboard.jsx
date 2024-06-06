@@ -21,7 +21,7 @@ export default function Dashboard() {
     return (
         <div className="flex">
             {/* Dashboard Sidebar */}
-            <div className="w-64 min-h-screen bg-orange-400">
+            <div className="w-64 min-h-screen bg-blue-400">
                 <ul className="menu p-4">
                     {isAdmin ? (
                         <>

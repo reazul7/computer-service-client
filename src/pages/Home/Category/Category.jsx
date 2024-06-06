@@ -14,7 +14,7 @@ import slide5 from "../../../assets/home/slide5.jpg";
 export default function Category() {
     return (
         <section className="my-16">
-            <SectionTitle subHeading={"From 11.00am to 10.00pm"} heading={"Order Online"} />
+            {/* <SectionTitle subHeading={"From 11.00am to 10.00pm"} heading={"Order Online"} />
             <Swiper
                 slidesPerView={1}
                 autoplay
@@ -75,7 +75,7 @@ export default function Category() {
                     <img src={slide5} alt="" />
                     <h3 className="text-4xl uppercase text-center -mt-20 text-white">Salads</h3>
                 </SwiperSlide>
-            </Swiper>
+            </Swiper> */}
         </section>
     );
 }

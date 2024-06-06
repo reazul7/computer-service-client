@@ -66,7 +66,7 @@ export default function ManageItems() {
                                 <td>{item?.price}</td>
                                 <td>
                                     <Link to={`/dashboard/update-items/${item?._id}`}>
-                                        <button className="btn btn-ghost bg-orange-500 btn-md">
+                                        <button className="p-2 rounded bg-green-500">
                                             <FaEdit className="text-white text-2xl" />{" "}
                                         </button>
                                     </Link>

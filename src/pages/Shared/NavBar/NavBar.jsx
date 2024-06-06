@@ -42,7 +42,7 @@ export default function NavBar() {
 
     return (
         <>
-            <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-xl">
+            <div className="navbar fixed z-10 bg-opacity-70 bg-black text-white max-w-screen-xl">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -69,7 +69,7 @@ export default function NavBar() {
                     <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle btn-outline">
                             <div className="indicator">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
