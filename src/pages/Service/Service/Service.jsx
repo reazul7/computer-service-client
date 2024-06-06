@@ -4,11 +4,11 @@ import useService from "../../../hooks/useService";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import ServiceCategory from "../ServiceCategory/ServiceCategory";
 
-import serviceImg from "../../../assets/menu/banner3.jpg";
-import softwareInstallationImg from "../../../assets/menu/salad-bg.jpg";
-import computerServiceImg from "../../../assets/menu/pizza-bg.jpg";
-import laptopServiceImg from "../../../assets/menu/soup-bg.jpg";
-import virusRemovalImg from "../../../assets/menu/dessert-bg.jpeg";
+import serviceImg from "../../../assets/service/our_services.jpg";
+import softwareInstallationImg from "../../../assets/service/data_recovery.jpg";
+import computerServiceImg from "../../../assets/service/desktop-repair.jpg";
+import laptopServiceImg from "../../../assets/service/laptop_repair.jpg";
+import virusRemovalImg from "../../../assets/service/virus_removal.jpg";
 
 export default function Service() {
     const [service] = useService();

@@ -6,7 +6,7 @@ import { useState } from "react";
 import useService from "../../../hooks/useService";
 import OrderTab from "../OrderTab/OrderTab";
 import { useParams } from "react-router-dom";
-import orderImage from "../../../assets/shop/banner2.jpg";
+import orderImage from "../../../assets/service/data_recovery.jpg";
 
 export default function Order() {
     const categories = ["computer-service", "laptop-service", "software-installations", "virus-removal", "data-recovery"];
