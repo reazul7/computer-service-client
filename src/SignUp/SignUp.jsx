@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -11,11 +11,15 @@ import SocialLogin from "../components/SocialLogin/SocialLogin";
 export default function SignUp() {
     const axiosPublic = useAxiosPublic();
     const [passwordShown, setPasswordShown] = useState(false);
+    const [confirmPasswordShown, setConfirmPasswordShown] = useState(false);
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const togglePasswordVisibility = () => {
         setPasswordShown(passwordShown ? false : true);
+    };
+    const toggleConfirmPasswordVisibility = () => {
+        setConfirmPasswordShown(confirmPasswordShown ? false : true);
     };
 
     const {
@@ -23,19 +27,19 @@ export default function SignUp() {
         handleSubmit,
         formState: { errors },
         reset,
+        watch,
     } = useForm();
 
     const onSubmit = data => {
         createUser(data.email, data.password).then(result => {
             const loggedUser = result.user;
             console.log("loggedUser", loggedUser);
-            updateUserProfile(data.name, data.photoURL)
+            updateUserProfile(data.name)
                 .then(() => {
                     // create user entry in the database
                     const userInfo = {
                         name: data.name,
                         email: data.email,
-                        photoURL: data.photoURL,
                     };
                     axiosPublic.post("/users", userInfo).then(res => {
                         if (res.data.insertedId) {
@@ -53,6 +57,9 @@ export default function SignUp() {
                 .catch(errors => console.log("update user profile error", errors));
         });
     };
+
+    // Watch password field
+    const password = watch("password");
 
     return (
         <>
@@ -79,14 +86,6 @@ export default function SignUp() {
                                 </label>
                                 <input type="text" {...register("name", { required: true })} name="name" placeholder="Name" className="input input-bordered" />
                                 {errors.name && <span className="text-red-500">Name is required*</span>}
-                            </div>
-                            {/* Photo Area */}
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Photo URL</span>
-                                </label>
-                                <input type="text" {...register("photoURL", { required: true })} placeholder="Photo URL" className="input input-bordered" />
-                                {errors.name && <span className="text-red-500">Photo URL is required*</span>}
                             </div>
                             {/* Email Area */}
                             <div className="form-control">
@@ -131,6 +130,30 @@ export default function SignUp() {
                                         character.*
                                     </span>
                                 )}
+                            </div>
+
+                            {/* Confirm Password Area */}
+                            <div className="form-control relative">
+                                <label className="label">
+                                    <span className="label-text">Confirm Password</span>
+                                </label>
+                                <div className="relative flex items-center">
+                                    <input
+                                        type={confirmPasswordShown ? "text" : "password"}
+                                        {...register("confirmPassword", {
+                                            required: true,
+                                            validate: value => value === password || "The passwords do not match"
+                                        })}
+                                        name="confirmPassword"
+                                        placeholder="Confirm Password"
+                                        className="input input-bordered w-full pr-10 flex-grow"
+                                    />
+                                    <i className="absolute right-4 hover:cursor-pointer hover:text-blue-500" onClick={toggleConfirmPasswordVisibility}>
+                                        {confirmPasswordShown ? <FaRegEyeSlash /> : <FaRegEye />}
+                                    </i>
+                                </div>
+                                {errors.confirmPassword?.type === "required" && <span className="text-red-500">Confirm Password is required*</span>}
+                                {errors.confirmPassword?.type === "validate" && <span className="text-red-500">{errors.confirmPassword.message}</span>}
                             </div>
 
                             {/* Submit SignUp Button Area */}
